@@ -1,0 +1,423 @@
+:root {
+	--primary: #b6895b;
+
+	--bg: #010101;
+}
+
+*, html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+
+}
+
+/* Discount Start */
+/* Slideshow container */
+.slideshow-container {
+    position: relative;
+    background: #1e0124;
+    animation: teks;
+
+  }
+
+  q {
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    text-overflow: clip;
+    text-shadow: 1px 1px 2px black;
+  }
+  
+  /* Slides */
+  .mySlides {
+    display: none;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -30px;
+    padding: 16px;
+    color: #f8f5f5;
+    font-weight: bold;
+    font-size: 15px;
+    border-radius: 1 3px 3px 1;
+    user-select: none;
+    text-decoration: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    position: absolute;
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    color: springgreen;
+  }
+  
+
+q:hover {
+    color: springgreen;
+}
+
+.brand {
+    position: relative;
+    background-color: #000000;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    height: 50px;
+}
+
+
+
+.firstname {
+    color: rgb(241, 4, 4);
+    font-weight: 700;
+    font-family: 'Goblin One', cursive;
+    font-size: 1.5rem;
+    padding-top: 10px;
+    text-shadow: 1px 1px 2px solid black;
+    position: relative;
+    display: inline-block;
+    text-transform: uppercase;
+    animation: flip 2s infinite;
+    animation-delay: calc(.2s * var(--i))
+    
+    
+}
+
+.lastname {
+    color: rgb(255, 255, 255);
+    font-family: 'Goblin One', cursive;
+    font-size: 1.5rem;
+    padding-top: 15px;
+    text-shadow: 1px 1px 2px solid black;
+    position: relative;
+    display: inline-block;
+    text-transform: uppercase;
+    animation: flip 2s infinite;
+    animation-delay: calc(.2s * var(--i))
+  
+}
+/* Discount End */
+
+/* Animasi text logo brand */
+@keyframes flip {
+    0%,80% {
+      transform: rotateY(360deg) 
+    }
+  }
+
+@keyframes waviy {
+    0%,40%,100% {
+        transform: translateY(0)
+    }
+    20% {
+      transform: translateY(-20px)
+    }
+}
+
+/* Navbar Start */
+
+nav {
+    background-color: #000000;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    height: 60px;
+}
+
+.menu .dropdown {
+    display: flex;
+    list-style-type: none;
+    gap: 5rem;
+}
+
+.menu .dropdown .dropdown-menu {
+    list-style-type: none;
+}
+
+.menu .dropdown .drpdwn {
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+.menu .dropdown .drpdwn:hover {
+    color: springgreen;
+    text-decoration: underline;
+}
+
+.dropdown-item {
+    color: whitesmoke;
+    text-decoration: none;
+    
+}
+    
+.dropdown-item:hover {
+    color: #1e0124;
+    
+}
+
+nav .menu .dropdown-menu {
+    display: none;
+}
+
+nav ul li:hover .dropdown-menu {
+    display: block;
+    background-color: #0d0d0e;
+    position: absolute;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+/* About Section */
+.about, 
+.products,
+.contact {
+	padding: 8rem 7% 1.4rem;
+  background-color: #645075;
+}
+
+.about h2,
+.products h2,
+.contact h2 {
+	text-align: center;
+	font-size: 2.6rem;
+	margin-bottom: 3rem;
+}
+
+.about h2 span, 
+.products h2 span,
+.contact h2 span {
+	color: #21130d;
+}
+
+.about .row {
+	display: flex;
+}
+
+.about .row .about-img {
+	flex: 1 1 10rem;
+}
+
+.about .row .about-img img {
+	width: 90%;
+	height: 100%;
+}
+
+.about .row .content {
+	flex: 1 1 35rem;
+	padding: 0 1rem;
+}
+
+.about .row .content h3 {
+	font-size:  1.8rem;
+	margin-bottom: 1rem;
+}
+
+.about .row .content p {
+	margin-bottom: 0.8rem;
+	font-size: 1.3rem;
+	font-weight: 100;
+	line-height: 1.6;
+}
+
+/* Products Section */
+.products .row {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+	gap: 1.5rem;
+	margin-top: 4rem;
+}
+
+.products .product-card {
+	text-align: center;
+	border: 1px solid #666;
+	padding: 2rem;
+}
+
+.products .product-icon {
+	display: flex;
+	justify-content: center;
+	gap: 0.5rem;
+}
+
+.products .product-icon a {
+	width: 4rem;
+	height: 4rem;
+	color: #0f072e;
+	margin: 0.3rem;
+	border: 1px solid #666;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.products .product-icon a:hover {
+	background-color: #2ccc7c;
+	border: 1px solid #2ccc7c;
+}
+
+.products .product-image {
+	padding: 1rem 0;
+}
+
+.products .product-image img {
+	height: 25rem;
+}
+
+.products .product-content h3 {
+	font-size: 2rem;
+}
+
+.products .product-stars {
+	font-size: 1.7rem;
+	padding: 0.8rem;
+	color: #000000;
+}
+
+.products .product-stars .star-full {
+	fill: var(--primary);
+}
+
+.products .product-price {
+	font-size: 1.3rem;
+	font-weight: bold;
+}
+
+.products .product-price span {
+	text-decoration: line-through;
+	font-weight: lighter;
+	font-size: 1rem;
+}
+
+/*footer*/
+
+footer {
+	background-color: #000000;
+	text-align: center;
+	padding: 1rem 0 3rem;
+	margin-top: 3rem;
+}
+
+footer .socials {
+	padding: 1rem;
+}
+
+footer .socials a {
+	color: #fff;
+	margin: 1rem;
+}
+
+footer .socials a:hover,
+footer .links a:hover {
+	color: springgreen;
+}
+
+footer .links {
+	margin-bottom: 1.4rem;
+}
+
+footer .links a {
+  text-decoration: none;
+	color: #fff;
+	padding: 0.8rem 1rem;
+}
+
+footer .credit {
+	font-size: 1rem;
+}
+
+footer .credit a {
+  text-decoration: none;
+	color: #f8e6d3;
+	font-weight: 700;
+}
+
+footer .credit p {
+  color: #dfccb9;
+}
+
+/* Modal Box */
+/*Item Detail */
+.modal {
+	display: none;
+	position: fixed;
+	z-index: 9999;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-container {
+	position: relative;
+	background-color: #fefefe;
+	color: #21130d;
+	margin: 15% auto;
+	padding: 1.2rem;
+	border: 1px solid #666;
+	width: 80%;
+	animation: animateModal 0.5s;
+}
+
+/* Modal Animation */
+
+@keyframes animateModal {
+	from {
+		top: -300px;
+		opacity: 0;
+	}
+
+	to {
+		top: 0;
+		opacity: 1;
+	}
+}
+
+.modal-container .close-icon {
+	position: absolute;
+	right: 1rem;
+}
+
+.modal-content {
+	display: flex;
+	flex-wrap: nowrap;
+}
+
+.modal-content img {
+	height: 16rem;
+	margin-right: 2rem;
+	margin-bottom: 2rem;
+}
+
+.modal-content p {
+	font-size: 1.2rem;
+	line-height: 1.8rem;
+	margin-top: 1.2rem;
+}
+
+.modal-content a {
+	display: flex;
+	gap: 1rem;
+	width: 12rem;
+	background-color: #21130d;
+	color: #666;
+	margin-top: 1rem;
+	padding: 1rem 1.6rem;
+}
